@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="SkeletonModule\Model\Receita" table="receita">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="valor" type="string" column="valor" length="255"/>
+        <field name="descricao_breve" type="string" column="descricao_breve" length="255"/>
+        <field name="data" type="datetime" column="data" column-definition="timestamp default current_timestamp"/>
+        <many-to-one target-entity="SkeletonModule\Model\Conta"
+                field = "contaId">
+            <join-column name="conta_id" referenced-column-name="id" />
+        </many-to-one>
+    </entity>
+</doctrine-mapping>

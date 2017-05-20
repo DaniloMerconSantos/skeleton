@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SkeletonModule\Model\Despesa" table="despesa">
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="valor" type="float" column="valor"/>
+    <field name="descricaoBreve" type="string" column="descricao_breve" length="255"/>
+    <field name="data" type="datetime" column="data"/>
+    <field name="contaId" type="integer" column="conta_id"/>
+  </entity>
+</doctrine-mapping>

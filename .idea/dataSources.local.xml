@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="skeleton" uuid="74604227-bc81-4caf-a027-1fff2cd34f14">
+      <secret-storage>master_key</secret-storage>
+      <user-name>demoUser</user-name>
+      <schema-pattern>demoDb.*</schema-pattern>
+      <default-schemas>demoDb.*</default-schemas>
+    </data-source>
+  </component>
+</project>
