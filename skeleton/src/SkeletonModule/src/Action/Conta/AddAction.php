@@ -6,7 +6,7 @@ namespace SkeletonModule\Application\Action;
  * Date: 18/05/17
  * Time: 16:33
  */
-class AccountAction
+class AddAction
 {
 
 

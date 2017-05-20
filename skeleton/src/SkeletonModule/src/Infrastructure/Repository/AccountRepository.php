@@ -14,12 +14,25 @@ use Doctrine\ORM\EntityManager;
 use SkeletonModule\Model\Conta;
 use SkeletonModule\Model\ModelInterface;
 
+/**
+ * Class AccountRepository
+ * @package SkeletonModule\Infrastructure\Repository
+ */
 class AccountRepository
 {
+    /**
+     * @var
+     */
     protected $model;
 
+    /**
+     * @var EntityManager
+     */
     private $entityManager;
 
+    /**
+     * @param EntityManager $entityManager
+     */
     public function __construct(EntityManager $entityManager)
     {
         $this->entityManager = $entityManager;
@@ -27,6 +40,10 @@ class AccountRepository
         $this->model = Conta::class;
     }
 
+    /**
+     * @param ModelInterface $model
+     * @return ModelInterface
+     */
     public function add(ModelInterface $model): ModelInterface
     {
         $this->entityManager->persist($model);
@@ -35,6 +52,10 @@ class AccountRepository
         return $model;
     }
 
+    /**
+     * @param array|null $params
+     * @return mixed
+     */
     public function listAll(array $params = null): array
     {
 
@@ -59,6 +80,10 @@ class AccountRepository
         return $accout;
     }
 
+    /**
+     * @param int $id
+     * @return ModelInterface
+     */
     public function find(int $id): ModelInterface
     {
         $accout = $this->entityManager
@@ -72,6 +97,10 @@ class AccountRepository
         return $accout;
     }
 
+    /**
+     * @param ModelInterface $model
+     * @return ModelInterface
+     */
     public function update(ModelInterface $model): ModelInterface
     {
 
@@ -81,6 +110,10 @@ class AccountRepository
         return $model;
     }
 
+    /**
+     * @param ModelInterface $model
+     * @return bool
+     */
     public function delete(ModelInterface $model): bool
     {
         $this->entityManager->remove($model);
