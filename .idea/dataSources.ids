@@ -7,21 +7,5 @@
     </database-info>
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <schema name="" catalog="demoDb"/>
-    <table name="conta" schema="" catalog="demoDb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="tipo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_5A2897AA628EE05C" table="receita" schema="" catalog="demoDb" columns="conta_id"/>
-    </table>
-    <table name="receita" schema="" catalog="demoDb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="conta_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="valor" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="descricao_breve" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="data" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_5A2897AA628EE05C" columns="conta_id" ref-table="conta" ref-schema="" ref-catalog="demoDb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="IDX_5A2897AA628EE05C" unique="false" columns="conta_id"/>
-    </table>
   </data-source>
 </component>

@@ -28,3 +28,7 @@
 
 $app->get('/', App\Action\HomePageAction::class, 'home');
 $app->get('/api/ping', App\Action\PingAction::class, 'api.ping');
+
+//Conta
+$app->post('/conta', SkeletonModule\Action\Conta\AddAccountAction::class, 'conta.add');
+$app->get('/conta', SkeletonModule\Action\Conta\ListAccountAction::class, 'conta');
